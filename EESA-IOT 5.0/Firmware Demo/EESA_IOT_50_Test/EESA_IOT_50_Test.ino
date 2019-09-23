@@ -202,6 +202,10 @@ void loop()
       debugSerial.println("Loop on Serial2 ");
       debugSerial.println("======================");
     }
+
+    while (Serial2.available() > 0) {
+      int dummy = Serial2.read();
+    }
   }
 
   if (Serial3.available() > 0 ) {
@@ -211,6 +215,10 @@ void loop()
       debugSerial.println("======================");
       debugSerial.println("Loop on Serial3 ");
       debugSerial.println("======================");
+    }
+
+    while (Serial3.available() > 0) {
+      int dummy = Serial3.read();
     }
   }
 
